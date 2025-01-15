@@ -1,0 +1,596 @@
+@font-face {
+    font-family: AnandaBlack;
+    src: url(font/AnandaBlackPersonalUseRegular-rg9Rx.ttf); /* Mengimpor font AnandaBlack */
+}
+
+/* navbar */
+.navbar-custom {
+    background-color: #fff; /* Mengatur warna latar belakang navbar */
+    border-color: #e7e7e7; /* Mengatur warna border navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada navbar */
+    height: 80px; /* Mengatur tinggi navbar */
+    z-index: 100; /* Mengatur z-index navbar */
+}
+.navbar-custom .navbar-brand {
+    font-family: 'AnandaBlack'; /* Mengatur font keluarga untuk brand navbar */
+    color: #333; /* Mengatur warna teks brand navbar */
+    font-weight: bold; /* Mengatur ketebalan font brand navbar */
+    font-size: xx-large; /* Mengatur ukuran font brand navbar */
+    line-height: 80px; /* Mengatur tinggi baris brand navbar */
+    height: 80px; /* Mengatur tinggi brand navbar */
+    padding: 0 50px; /* Mengatur padding brand navbar */
+}
+.navbar-custom .navbar-nav > li > a {
+    color: #333; /* Mengatur warna teks link navbar */
+    font-size: 16px; /* Mengatur ukuran font link navbar */
+    padding: 0 20px; /* Mengatur padding link navbar */
+    line-height: 80px; /* Mengatur tinggi baris link navbar */
+    height: 80px; /* Mengatur tinggi link navbar */
+}
+.navbar-custom .navbar-nav > li > a:hover {
+    background-color: transparent; /* Mengatur warna latar belakang link navbar saat di-hover */
+    color: #ff6f61; /* Mengatur warna teks link navbar saat di-hover */
+}
+.navbar-custom .navbar-nav > li.active > a {
+    color: #ff6f61; /* Mengatur warna teks link navbar yang aktif */
+    background-color: transparent; /* Mengatur warna latar belakang link navbar yang aktif */
+}
+.navbar-custom .navbar-nav > li > a {
+    position: relative; /* Mengatur posisi relatif link navbar */
+}
+.navbar-custom .navbar-right > li > a {
+    color: #333; /* Mengatur warna teks link navbar kanan */
+    font-size: 18px; /* Mengatur ukuran font link navbar kanan */
+    padding: 0 20px; /* Mengatur padding link navbar kanan */
+    line-height: 80px; /* Mengatur tinggi baris link navbar kanan */
+    height: 80px; /* Mengatur tinggi link navbar kanan */
+}
+.navbar-custom .navbar-right > li > a:hover {
+    background-color: transparent; /* Mengatur warna latar belakang link navbar kanan saat di-hover */
+    color: #ff6f61; /* Mengatur warna teks link navbar kanan saat di-hover */
+}
+.navbar-toggle .icon-bar {
+    z-index: 10; /* Mengatur z-index ikon hamburger */
+    background-color: #000; /* Mengatur warna ikon hamburger */
+}
+
+/* untuk mengubah latar belakang navbar pada perangkat mobile */
+@media (max-width: 767px) {
+    .navbar {
+        background-color: #ffffff; /* Mengatur warna latar belakang navbar pada perangkat mobile */
+    }
+    .navbar-collapse {
+        background-color: #ffffff; /* Mengatur warna latar belakang menu dropdown pada perangkat mobile */
+    }
+    .navbar-nav > li > a {
+        color: #000; /* Mengatur warna teks menu pada perangkat mobile */
+    }
+    /* filter  */
+    .filter-container {
+        flex-direction: column; /* Mengatur arah flex container menjadi kolom */
+        align-items: flex-start; /* Mengatur align item flex container menjadi flex-start */
+    }
+    .filter-container .search-input,
+    .filter-container .results-info,
+    .filter-container .dropdown {
+        width: 100%; /* Mengatur lebar elemen filter menjadi 100% */
+    }
+    .filter-container .search-input {
+        display: flex; /* Mengatur display elemen search input menjadi flex */
+        width: 100%; /* Mengatur lebar elemen search input menjadi 100% */
+    }
+    .filter-container .search-input input {
+        flex: 1; /* Mengatur elemen input search input agar fleksibel */
+    }
+    .filter-container .search-input button {
+        margin-left: 10px; /* Mengatur margin kiri elemen button search input */
+    }
+}
+
+
+/* carousel */
+.carousel{
+    height: 90vh;
+}
+.carousel-inner > .item > img {
+    width: 100%;
+    height: 90vh;
+    
+}
+
+/* filter product  */
+.filter-container {
+    display: flex; /* Mengatur display filter container menjadi flex */
+    justify-content: space-between; /* Mengatur justify content filter container menjadi space-between */
+    align-items: center; /* Mengatur align items filter container menjadi center */
+    margin-bottom: 20px; /* Mengatur margin bawah filter container */
+    margin-top: 100px; /* Mengatur margin atas filter container */
+}
+.filter-container .search-input {
+    display: flex; /* Mengatur display search input menjadi flex */
+    align-items: center; /* Mengatur align items search input menjadi center */
+    gap: 10px; /* Mengatur jarak antar elemen search input */
+}
+.filter-container .search-input input {
+    padding: 10px; /* Mengatur padding input search input */
+    border: 1px solid #ddd; /* Mengatur border input search input */
+    border-radius: 5px; /* Mengatur border radius input search input */
+    width: 200px; /* Mengatur lebar input search input */
+}
+.filter-container .search-btn {
+    background-color: #ff6f61; /* Mengatur warna latar belakang tombol search */
+    color: #fff; /* Mengatur warna teks tombol search */
+    border: none; /* Menghilangkan border tombol search */
+    padding: 10px 20px; /* Mengatur padding tombol search */
+    border-radius: 5px; /* Mengatur border radius tombol search */
+    text-transform: uppercase; /* Mengatur teks tombol search menjadi uppercase */
+    font-weight: bold; /* Mengatur ketebalan font tombol search */
+}
+.filter-container .search-btn:hover {
+    background-color: #c0766d; /* Mengatur warna latar belakang tombol search saat di-hover */
+    color: #fff; /* Mengatur warna teks tombol search saat di-hover */
+}
+.filter-container .results-info {
+    font-size: 1em; /* Mengatur ukuran font info hasil filter */
+    color: #888; /* Mengatur warna teks info hasil filter */
+}
+.filter-container .dropdown {
+    display: inline-block; /* Mengatur display dropdown menjadi inline-block */
+}
+.filter-container .dropdown-toggle {
+    background-color: #ff6f61; /* Mengatur warna latar belakang tombol dropdown */
+    color: #fff; /* Mengatur warna teks tombol dropdown */
+    border: none; /* Menghilangkan border tombol dropdown */
+    padding: 10px 20px; /* Mengatur padding tombol dropdown */
+    border-radius: 5px; /* Mengatur border radius tombol dropdown */
+    text-transform: uppercase; /* Mengatur teks tombol dropdown menjadi uppercase */
+    font-weight: bold; /* Mengatur ketebalan font tombol dropdown */
+}
+.filter-container .dropdown-menu {
+    background-color: #333; /* Mengatur warna latar belakang menu dropdown */
+    color: #fff; /* Mengatur warna teks menu dropdown */
+    border: none; /* Menghilangkan border menu dropdown */
+    border-radius: 5px; /* Mengatur border radius menu dropdown */
+}
+.filter-container .dropdown-menu > li > a {
+    color: #fff; /* Mengatur warna teks link menu dropdown */
+    text-transform: uppercase; /* Mengatur teks link menu dropdown menjadi uppercase */
+}
+.filter-container .dropdown-menu > li > a:hover {
+    background-color: #d48b84; /* Mengatur warna latar belakang link menu dropdown saat di-hover */
+    color: #fff; /* Mengatur warna teks link menu dropdown saat di-hover */
+}
+
+/* card  */
+.card {
+    border: 1px solid #ddd; /* Mengatur border card */
+    border-radius: 10px; /* Mengatur border radius card */
+    margin: 15px 0; /* Mengatur margin atas dan bawah card */
+    text-align: center; /* Mengatur teks card menjadi center */
+    position: relative; /* Mengatur posisi card menjadi relative */
+    height: 500px; /* Mengatur tinggi card */
+    display: flex; /* Mengatur display card menjadi flex */
+    flex-direction: column; /* Mengatur arah flex card menjadi kolom */
+    justify-content: space-between; /* Mengatur justify content card menjadi space-between */
+    overflow: hidden; /* Mengatur overflow card menjadi hidden */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Mengatur transisi transform dan box-shadow card */
+    will-change: transform; /* Mengatur will-change card menjadi transform */
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Mengatur bayangan card saat di-hover */
+    transform: translateY(-5px); /* Mengangkat card saat di-hover */
+    position: relative; /* Pastikan posisi relatif */
+}
+
+.card img {
+    max-width: 100%; /* Mengatur lebar maksimal gambar card */
+    border-radius: 4px; /* Mengatur border radius gambar card */
+    height: 350px; /* Mengatur tinggi gambar card */
+    object-fit: cover; /* Mengatur gambar card agar sesuai dengan ukuran */
+}
+.card .new-badge {
+    position: absolute; /* Mengatur posisi badge menjadi absolute */
+    top: 10px; /* Mengatur posisi top badge */
+    right: 10px; /* Mengatur posisi right badge */
+    background-color: red; /* Mengatur warna latar belakang badge */
+    color: white; /* Mengatur warna teks badge */
+    padding: 5px 10px; /* Mengatur padding badge */
+    border-radius: 3px; /* Mengatur border radius badge */
+    font-size: 12px; /* Mengatur ukuran font badge */
+    text-transform: uppercase; /* Mengatur teks badge menjadi uppercase */
+}
+.card .title {
+    font-size: 1.2em; /* Mengatur ukuran font judul card */
+    font-weight: bold; /* Mengatur ketebalan font judul card */
+    margin: 10px 0; /* Mengatur margin atas dan bawah judul card */
+    white-space: nowrap; /* Mengatur white-space judul card */
+    overflow: hidden; /* Mengatur overflow judul card */
+    text-overflow: ellipsis; /* Mengatur teks overflow judul card menjadi ellipsis */
+    transition: all 0.3s ease; /* Mengatur transisi semua properti judul card */
+}
+.card .price {
+    font-size: 1.5em; /* Mengatur ukuran font harga card */
+    color: #333; /* Mengatur warna teks harga card */
+    margin-bottom: 10px; /* Mengatur margin bawah harga card */
+}
+.card .old-price {
+    text-decoration: line-through; /* Mengatur teks harga lama menjadi coret */
+    color: #999; /* Mengatur warna teks harga lama */
+}
+.card .rating .glyphicon {
+    color: #f39c12; /* Mengatur warna ikon rating */
+}
+.card .reviews {
+    color: #999; /* Mengatur warna teks ulasan */
+}
+.card .buttons {
+    position: absolute; /* Mengatur posisi tombol menjadi absolute */
+    top: 50%; /* Mengatur posisi top tombol */
+    left: 50%; /* Mengatur posisi left tombol */
+    transform: translate(-50%, -50%); /* Mengatur transform tombol */
+    display: none; /* Mengatur display tombol menjadi none */
+    flex-direction: column; /* Mengatur arah flex tombol menjadi kolom */
+    gap: 10px; /* Mengatur jarak antar tombol */
+    transition: opacity 0.3s ease; /* Mengatur transisi opacity tombol */
+}
+.card .btn {
+    background-color: #d48b84; /* Mengatur warna latar belakang tombol */
+    color: #fff; /* Mengatur warna teks tombol */
+    border: none; /* Menghilangkan border tombol */
+    padding: 10px 20px; /* Mengatur padding tombol */
+    border-radius: 5px; /* Mengatur border radius tombol */
+    text-transform: uppercase; /* Mengatur teks tombol menjadi uppercase */
+    font-weight: bold; /* Mengatur ketebalan font tombol */
+}
+.card .btn:hover {
+    background-color: #c0766d; /* Mengatur warna latar belakang tombol saat di-hover */
+}
+.card:hover .buttons {
+    display: flex; /* Mengatur display tombol menjadi flex saat card di-hover */
+    opacity: 1; /* Mengatur opacity tombol menjadi 1 saat card di-hover */
+}
+.card:hover .title {
+    white-space: normal; /* Mengatur white-space judul card menjadi normal saat di-hover */
+    overflow: visible; /* Mengatur overflow judul card menjadi visible saat di-hover */
+    background-color: rgba(255, 255, 255, 0.9); /* Mengatur warna latar belakang judul card saat di-hover */
+    padding: 5px; /* Mengatur padding judul card saat di-hover */
+}
+
+/* pagination  */
+.pagination-centered {
+    display: flex; /* Mengatur display pagination menjadi flex */
+    justify-content: center; /* Mengatur justify content pagination menjadi center */
+}
+.pagination > li > a {
+    color: #ff6f61 !important; /* Mengatur warna teks link pagination */
+}
+.pagination > li > a:hover {
+    background-color: #ff6f61 !important; /* Mengatur warna latar belakang link pagination saat di-hover */
+    color: white !important; /* Mengatur warna teks link pagination saat di-hover */
+}
+
+/* promo  */
+.promo-section {
+    margin-top: 100px;
+    padding: 40px 0; /* Mengatur padding promo section */
+    background-color: #fff; /* Mengatur warna latar belakang promo section */
+}
+.promo-item {
+    text-align: center; /* Mengatur teks promo item menjadi center */
+    padding: 20px; /* Mengatur padding promo item */
+    border-radius: 10px; /* Mengatur border radius promo item */
+    margin-bottom: 20px; /* Mengatur margin bawah promo item */
+    position: relative; /* Mengatur posisi promo item menjadi relative */
+}
+.promo-item img {
+    max-width: 100%; /* Mengatur lebar maksimal gambar promo item */
+    height: 250px; /* Mengatur tinggi gambar promo item */
+    margin-bottom: 20px; /* Mengatur margin bawah gambar promo item */
+    border-radius: 15px; /* Mengatur border radius gambar promo item */
+}
+.promo-discount {
+    position: absolute; /* Mengatur posisi promo discount menjadi absolute */
+    bottom: 20px; /* Mengatur posisi bottom promo discount */
+    left: 20px; /* Mengatur posisi left promo discount */
+    background-color: rgba(0, 0, 0, 0.7); /* Mengatur warna latar belakang promo discount */
+    color: #fff; /* Mengatur warna teks promo discount */
+    padding: 10px 20px; /* Mengatur padding promo discount */
+    border-radius: 5px; /* Mengatur border radius promo discount */
+    font-size: 1.2em; /* Mengatur ukuran font promo discount */
+}
+.promo-discount span {
+    font-size: 2em; /* Mengatur ukuran font span promo discount */
+    font-weight: bold; /* Mengatur ketebalan font span promo discount */
+}
+
+/* testimonials */
+.testimonials {
+    padding: 50px 0; /* Mengatur padding testimonials section */
+    background-color: #f9f9f9; /* Mengatur warna latar belakang testimonials section */
+}
+.testimonials h2 {
+    font-size: 36px; /* Mengatur ukuran font judul testimonials */
+    margin-bottom: 20px; /* Mengatur margin bawah judul testimonials */
+}
+.testimonials p {
+    font-size: 16px; /* Mengatur ukuran font teks testimonials */
+    color: #777; /* Mengatur warna teks testimonials */
+    margin-bottom: 40px; /* Mengatur margin bawah teks testimonials */
+}
+.testimonials .img-circle {
+    width: 100px; /* Mengatur lebar gambar testimonials */
+    height: 100px; /* Mengatur tinggi gambar testimonials */
+    border-radius: 50%; /* Mengatur border radius gambar testimonials */
+    margin-bottom: 20px; /* Mengatur margin bawah gambar testimonials */
+}
+.testimonials .title {
+    font-size: 18px; /* Mengatur ukuran font judul testimonials */
+    font-weight: bold; /* Mengatur ketebalan font judul testimonials */
+    margin-bottom: 10px; /* Mengatur margin bawah judul testimonials */
+}
+.testimonials .text-center {
+    text-align: center; /* Mengatur teks testimonials menjadi center */
+}
+.carousel-indicators li {
+    background-color: #777; /* Mengatur warna latar belakang indikator carousel */
+}
+.carousel-indicators .active {
+    background-color: #333; /* Mengatur warna latar belakang indikator carousel yang aktif */
+}
+
+/* Tambahkan warna latar belakang pada carousel */
+.carousel-inner {
+    background-color: #f9f9f9; /* Mengatur warna latar belakang carousel */
+    padding: 30px 0; /* Mengatur padding carousel */
+}
+
+/* newsletter */
+.newsletter-section {
+    padding: 50px 0; /* Mengatur padding newsletter section */
+    background-color: #fff; /* Mengatur warna latar belakang newsletter section */
+    text-align: center; /* Mengatur teks newsletter section menjadi center */
+}
+.newsletter-section h2 {
+    font-size: 36px; /* Mengatur ukuran font judul newsletter */
+    margin-bottom: 20px; /* Mengatur margin bawah judul newsletter */
+    color: #333; /* Mengatur warna teks judul newsletter */
+}
+.newsletter-section p {
+    font-size: 16px; /* Mengatur ukuran font teks newsletter */
+    color: #777; /* Mengatur warna teks newsletter */
+    margin-bottom: 20px; /* Mengatur margin bawah teks newsletter */
+}
+.newsletter-section input[type="email"] {
+    padding: 10px; /* Mengatur padding input email newsletter */
+    width: 300px; /* Mengatur lebar input email newsletter */
+    max-width: 100%; /* Mengatur lebar maksimal input email newsletter */
+    margin-right: 10px; /* Mengatur margin kanan input email newsletter */
+    border: 1px solid #ddd; /* Mengatur border input email newsletter */
+    border-radius: 5px; /* Mengatur border radius input email newsletter */
+}
+.newsletter-section button {
+    padding: 10px 20px; /* Mengatur padding tombol newsletter */
+    background-color: #ff69b4; /* Mengatur warna latar belakang tombol newsletter */
+    color: #fff; /* Mengatur warna teks tombol newsletter */
+    border: none; /* Menghilangkan border tombol newsletter */
+    border-radius: 5px; /* Mengatur border radius tombol newsletter */
+    cursor: pointer; /* Mengatur cursor tombol newsletter */
+}
+
+/* blog  */
+.blog-posts {
+    padding: 50px 0; /* Mengatur padding blog posts section */
+    background-color: #f9f9f9; /* Mengatur warna latar belakang blog posts section */
+}
+.blog-posts h2 {
+    text-align: center; /* Mengatur teks judul blog posts menjadi center */
+    font-size: 36px; /* Mengatur ukuran font judul blog posts */
+    margin-bottom: 20px; /* Mengatur margin bawah judul blog posts */
+    color: #333; /* Mengatur warna teks judul blog posts */
+}
+.blog-posts p {
+    text-align: center; /* Mengatur teks blog posts menjadi center */
+    font-size: 16px; /* Mengatur ukuran font teks blog posts */
+    margin-bottom: 40px; /* Mengatur margin bawah teks blog posts */
+    color: #777; /* Mengatur warna teks blog posts */
+}
+.blog-item {
+    background-color: #fff; /* Mengatur warna latar belakang blog item */
+    border: 1px solid #ddd; /* Mengatur border blog item */
+    border-radius: 5px; /* Mengatur border radius blog item */
+    overflow: hidden; /* Mengatur overflow blog item */
+    margin-bottom: 30px; /* Mengatur margin bawah blog item */
+    transition: transform 0.3s; /* Mengatur transisi transform blog item */
+    height: 600px; /* Mengatur tinggi blog item */
+}
+.blog-item img {
+    width: 100%; /* Mengatur lebar gambar blog item */
+    height: auto; /* Mengatur tinggi gambar blog item */
+}
+.blog-item h3 {
+    font-size: 24px; /* Mengatur ukuran font judul blog item */
+    margin: 15px; /* Mengatur margin judul blog item */
+    color: #333; /* Mengatur warna teks judul blog item */
+}
+.blog-item p {
+    font-size: 14px; /* Mengatur ukuran font teks blog item */
+    margin: 0 15px 15px; /* Mengatur margin teks blog item */
+    color: #777; /* Mengatur warna teks blog item */
+}
+.blog-item:hover {
+    transform: translateY(-10px); /* Mengatur transform blog item saat di-hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Mengatur bayangan blog item saat di-hover */
+}
+
+/* about */
+.about-section {
+    padding: 50px 0; /* Mengatur padding about section */
+    margin-top: 50px; /* Mengatur margin atas about section */
+}
+.about-section h2 {
+    text-align: center; /* Mengatur teks judul about section menjadi center */
+    font-size: 36px; /* Mengatur ukuran font judul about section */
+    margin-bottom: 20px; /* Mengatur margin bawah judul about section */
+    color: #333; /* Mengatur warna teks judul about section */
+}
+.about-section .about-content {
+    display: flex; /* Mengatur display about content menjadi flex */
+    align-items: center; /* Mengatur align items about content menjadi center */
+    margin-bottom: 40px; /* Mengatur margin bawah about content */
+}
+.about-section .about-content img {
+    max-width: 100%; /* Mengatur lebar maksimal gambar about content */
+    border-radius: 10px; /* Mengatur border radius gambar about content */
+    margin-right: 20px; /* Mengatur margin kanan gambar about content */
+}
+.about-section .about-content .text {
+    max-width: 600px; /* Mengatur lebar maksimal teks about content */
+}
+.about-section .about-content .text p {
+    font-size: 16px; /* Mengatur ukuran font teks about content */
+    color: #777; /* Mengatur warna teks about content */
+}
+.about-section .stats {
+    display: flex; /* Mengatur display stats menjadi flex */
+    justify-content: space-around; /* Mengatur justify content stats menjadi space-around */
+    margin-bottom: 40px; /* Mengatur margin bawah stats */
+}
+.about-section .stats div {
+    text-align: center; /* Mengatur teks stats menjadi center */
+}
+.about-section .stats i {
+    color: #ff69b4; /* Mengatur warna ikon stats */
+    margin-bottom: 10px; /* Mengatur margin bawah ikon stats */
+}
+.about-section .stats h3 {
+    font-size: 24px; /* Mengatur ukuran font judul stats */
+    color: #333; /* Mengatur warna teks judul stats */
+}
+.about-section .stats p {
+    font-size: 16px; /* Mengatur ukuran font teks stats */
+    color: #777; /* Mengatur warna teks stats */
+}
+.about-section .row {
+    margin-bottom: 40px; /* Mengatur margin bawah row about section */
+}
+.about-section .row img {
+    max-width: 100%; /* Mengatur lebar maksimal gambar row about section */
+    border-radius: 10px; /* Mengatur border radius gambar row about section */
+}
+.about-section .row h2 {
+    font-size: 28px; /* Mengatur ukuran font judul row about section */
+    color: #333; /* Mengatur warna teks judul row about section */
+    margin-top: 20px; /* Mengatur margin atas judul row about section */
+}
+.about-section .row p {
+    font-size: 16px; /* Mengatur ukuran font teks row about section */
+    color: #777; /* Mengatur warna teks row about section */
+}
+.about-section .row .text-center i {
+    font-size: 40px; /* Mengatur ukuran font ikon row about section */
+    color: #ff69b4; /* Mengatur warna ikon row about section */
+    margin-bottom: 10px; /* Mengatur margin bawah ikon row about section */
+}
+.about-section .row .text-center h4 {
+    font-size: 20px; /* Mengatur ukuran font judul row about section */
+    color: #333; /* Mengatur warna teks judul row about section */
+}
+.about-section .row .text-center p {
+    font-size: 16px; /* Mengatur ukuran font teks row about section */
+    color: #777; /* Mengatur warna teks row about section */
+}
+
+/* contact */
+.contact-section {
+    padding: 50px 0; /* Mengatur padding contact section */
+    margin-top: 50px; /* Mengatur margin atas contact section */
+}
+.contact-section .form-group {
+    margin-bottom: 25px; /* Mengatur margin bawah form group contact section */
+}
+.contact-section .btn-submit {
+    background-color: #ff6b6b; /* Mengatur warna latar belakang tombol submit contact section */
+    color: white; /* Mengatur warna teks tombol submit contact section */
+    border: none; /* Menghilangkan border tombol submit contact section */
+    padding: 10px 20px; /* Mengatur padding tombol submit contact section */
+    cursor: pointer; /* Mengatur cursor tombol submit contact section */
+}
+.contact-section .btn-submit:hover {
+    background-color: #ff0000; /* Mengatur warna latar belakang tombol submit contact section saat di-hover */
+    color: white; /* Mengatur warna teks tombol submit contact section saat di-hover */
+}
+.contact-info {
+    background-color: #f9f9f9; /* Mengatur warna latar belakang contact info */
+    padding: 20px; /* Mengatur padding contact info */
+    margin-top: 30px; /* Mengatur margin atas contact info */
+    margin-bottom: 15px; /* Mengatur margin bawah contact info */
+}
+.contact-info div {
+    margin-bottom: 15px; /* Mengatur margin bawah div contact info */
+}
+.map-container {
+    margin-top: 30px; /* Mengatur margin atas map container */
+}
+
+/* footer  */
+.footer {
+    background-color: #f8f8f8; /* Mengatur warna latar belakang footer */
+    padding: 40px 0; /* Mengatur padding footer */
+    border-top: 1px solid #e7e7e7; /* Mengatur border atas footer */
+}
+.footer .footer-logo {
+    margin-bottom: 20px; /* Mengatur margin bawah logo footer */
+}
+.footer .footer-logo h1 {
+    font-family: 'AnandaBlack'; /* Mengatur font keluarga logo footer */
+    font-size: xx-large; /* Mengatur ukuran font logo footer */
+    font-weight: bolder; /* Mengatur ketebalan font*/
+    color: #ff6f61; /* Mengatur warna teks logo footer */
+}
+.footer .footer-description {
+    color: #888; /* Mengatur warna teks deskripsi footer */
+    font-size: 0.9em; /* Mengatur ukuran font deskripsi footer */
+    margin-bottom: 20px; /* Mengatur margin bawah deskripsi footer */
+    }
+    .footer .footer-links {
+    list-style: none; /* Menghilangkan list style link footer */
+    padding: 0; /* Menghilangkan padding link footer */
+    }
+    .footer .footer-links li {
+    margin-bottom: 10px; /* Mengatur margin bawah item link footer */
+    }
+    .footer .footer-links a {
+    color: #333; /* Mengatur warna teks link footer */
+    text-decoration: none; /* Menghilangkan dekorasi teks link footer */
+    }
+    .footer .footer-links a:hover {
+    text-decoration: underline; /* Mengatur dekorasi teks link footer saat di-hover */
+    }
+    .footer .footer-social {
+    list-style: none; /* Menghilangkan list style sosial footer */
+    padding: 0; /* Menghilangkan padding sosial footer */
+    display: flex; /* Mengatur display sosial footer menjadi flex */
+    gap: 10px; /* Mengatur jarak antar item sosial footer */
+    }
+    .footer .footer-social li {
+    display: inline-block; /* Mengatur display item sosial footer menjadi inline-block */
+    }
+    .footer .footer-social a {
+    color: #333; /* Mengatur warna teks link sosial footer */
+    font-size: 1.5em; /* Mengatur ukuran font link sosial footer */
+    text-decoration: none; /* Menghilangkan dekorasi teks link sosial footer */
+    }
+    .footer .footer-social a:hover {
+    color: #d48b84; /* Mengatur warna teks link sosial footer saat di-hover */
+    }
+    .footer .footer-bottom {
+    text-align: center; /* Mengatur teks footer bottom menjadi center */
+    color: #888; /* Mengatur warna teks footer bottom */
+    font-size: 0.9em; /* Mengatur ukuran font footer bottom */
+    margin-top: 20px; /* Mengatur margin atas footer bottom */
+    }
+    .footer .footer-bottom span {
+    color: #d48b84; /* Mengatur warna teks span footer bottom */
+    }
+    
